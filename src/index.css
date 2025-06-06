@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 47 95% 50%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 47 95% 50%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --chart-1: 221 83% 53%;
+    --chart-2: 47 95% 50%;
+    --chart-3: 222 47% 11%;
+    --chart-4: 199 89% 48%;
+    --chart-5: 47 95% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 47 95% 50%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 47 95% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --chart-1: 221 83% 53%;
+    --chart-2: 47 95% 50%;
+    --chart-3: 210 40% 98%;
+    --chart-4: 199 89% 48%;
+    --chart-5: 47 95% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Custom styles */
+.page-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.page-header {
+  @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6;
+}
+
+.page-title {
+  @apply text-3xl font-bold tracking-tight;
+}
+
+.data-table-container {
+  @apply bg-card rounded-lg border shadow-sm;
+}
+
+.data-table-header {
+  @apply p-6 border-b;
+}
+
+.data-table-title {
+  @apply text-lg font-semibold;
+}
+
+.data-table-description {
+  @apply text-sm text-muted-foreground mt-1;
+}
+
+.data-table-toolbar {
+  @apply flex flex-col sm:flex-row items-center gap-4 p-4;
+}
+
+.data-table-search {
+  @apply relative w-full sm:w-72;
+}
+
+.data-table-search-icon {
+  @apply absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground;
+}
+
+.data-table-search-input {
+  @apply pl-8 w-full;
+}
+
+.data-table-filters {
+  @apply flex items-center gap-2 w-full sm:w-auto;
+}
+
+.data-table-content {
+  @apply p-4;
+}
+
+.data-table-footer {
+  @apply flex items-center justify-between px-4 py-3 border-t;
+}
+
+.data-table-pagination {
+  @apply flex items-center gap-2;
+}
+
+.form-container {
+  @apply space-y-6;
+}
+
+.form-section {
+  @apply grid gap-4 py-4;
+}
+
+.form-group {
+  @apply grid grid-cols-4 items-start gap-4;
+}
+
+.form-label {
+  @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+}
+
+.form-field {
+  @apply col-span-3;
+}
+
+.form-description {
+  @apply text-sm text-muted-foreground;
+}
+
+.form-message {
+  @apply text-sm font-medium text-destructive;
+}
+
+.form-footer {
+  @apply flex items-center justify-end gap-4 pt-6;
+}
+
+.card-grid {
+  @apply grid gap-4 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.stats-grid {
+  @apply grid gap-4 md:grid-cols-2 lg:grid-cols-4;
+}
+
+.chart-container {
+  @apply bg-card rounded-lg border shadow-sm p-6;
+}
+
+.chart-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.chart-title {
+  @apply text-lg font-semibold;
+}
+
+.chart-description {
+  @apply text-sm text-muted-foreground;
+}
