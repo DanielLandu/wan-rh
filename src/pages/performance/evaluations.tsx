@@ -99,11 +99,11 @@ export default function Evaluations() {
   });
 
   const totalEvaluations = evaluations.length;
-  const completedEvaluations = evaluations.filter(eval => eval.statut === 'Terminé').length;
+  const completedEvaluations = evaluations.filter(evaluation => evaluation.statut === 'Terminé').length;
   const averageScore = evaluations
-    .filter(eval => eval.performanceScore > 0)
-    .reduce((sum, eval) => sum + eval.performanceScore, 0) / 
-    evaluations.filter(eval => eval.performanceScore > 0).length;
+    .filter(evaluation => evaluation.performanceScore > 0)
+    .reduce((sum, evaluation) => sum + evaluation.performanceScore, 0) / 
+    evaluations.filter(evaluation => evaluation.performanceScore > 0).length;
 
   return (
     <div className="space-y-6 p-8 pt-6">
