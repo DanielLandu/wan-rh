@@ -69,7 +69,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/" element={<Layout />}>
-              <Route index element={<Navigate to="/tableau-de-bord/global" replace />} />
+              <Route index element={<Navigate to="/tableau-de-bord/global\" replace />} />
               
               {/* Tableau de Bord */}
               <Route path="/tableau-de-bord/global" element={<TableauDeBordGlobal />} />
