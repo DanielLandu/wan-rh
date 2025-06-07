@@ -277,7 +277,7 @@ export default function Presence() {
                     <TableCell>{record.heuresTravaillees}</TableCell>
                     <TableCell>
                       {record.retard ? (
-                        <Badge variant="destructive" className="text-xs">
+                        <Badge variant="destructive\" className="text-xs">
                           {record.retard}
                         </Badge>
                       ) : (
