@@ -266,7 +266,7 @@ export default function Conges() {
                       <div className="flex items-center gap-2">
                         {request.statut === 'En attente' && (
                           <>
-                            <Button variant="outline" size="sm" className="text-green-600">
+                            <Button variant="outline\" size="sm\" className="text-green-600">
                               <Check className="h-4 w-4" />
                             </Button>
                             <Button variant="outline" size="sm" className="text-red-600">
